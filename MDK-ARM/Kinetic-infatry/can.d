@@ -30,3 +30,5 @@ kinetic-infatry\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_e
 kinetic-infatry\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 kinetic-infatry\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 kinetic-infatry\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+kinetic-infatry\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+kinetic-infatry\can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h

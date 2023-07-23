@@ -3,6 +3,7 @@
 "kinetic-infatry\main.o"
 "kinetic-infatry\gpio.o"
 "kinetic-infatry\can.o"
+"kinetic-infatry\tim.o"
 "kinetic-infatry\stm32f4xx_it.o"
 "kinetic-infatry\stm32f4xx_hal_msp.o"
 "kinetic-infatry\system_stm32f4xx.o"

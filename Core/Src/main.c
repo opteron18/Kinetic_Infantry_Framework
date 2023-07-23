@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "can.h"
+#include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -88,6 +89,9 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_CAN1_Init();
+  MX_TIM1_Init();
+  MX_TIM4_Init();
+  MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
 	Total_PID_Init();       //pid≥ı ºªØ
 	can_filter_init();//can???
@@ -100,9 +104,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+//		speed = motor_yaw_info.rotor_speed;
 		HAL_GPIO_WritePin(GPIOH,LED_G_Pin, GPIO_PIN_SET);
-		PID_Control(&Fire_speed_pid, 1000, -motor_yaw_info.rotor_speed);
-		set_GM6020_motor_voltage(&hcan1,Fire_speed_pid.Control_OutPut);
+		PID_Control(&Fire_speed_pid, 10, motor_yaw_info.rotor_speed);
+//		set_GM6020_motor_voltage(&hcan1,Fire_speed_pid.Control_OutPut);
 		HAL_Delay(10);
   }
   /* USER CODE END 3 */
